@@ -1,10 +1,35 @@
 # Latte version branch 2.x maintained for PHP 8.4 onwards
 
+>
+> 💿 `composer require viaaurea/latte-v2`
+>
+
+
 Latte support for the v2 branch ended in 2023 with PHP 8.3 as the final supported PHP version.
 
 We intend to support Latte v2 further, due to the fact that migration to Latte v3 is not trivial, if projects use custom tags (macros) heavily.
 
 The intention is to support PHP 8.4+ without any deprecation warnings so that `E_ALL` can be used as the reporting level without issues.
+
+
+## Installation
+
+Replace the original Latte v2 by this package:
+
+```
+composer remove latte/latte
+composer require viaaurea/latte-v2
+```
+
+You should see the original Latte being uninstalled.
+
+>
+> 💡
+>
+> This package _replaces_ the original Latte of version `2.11.*`,
+> which means other packages that require `latte/latte:^2.11` will be content with `viaaurea/latte-v2`.
+>
+
 
 ---
 
