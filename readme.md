@@ -1,3 +1,20 @@
+# Latte version branch 2.x maintained for PHP 8.4 onwards
+
+Latte support for the v2 branch ended in 2023 with PHP 8.3 as the final supported PHP version.
+
+We intend to support Latte v2 further, due to the fact that migration to Latte v3 is not trivial, if projects use custom tags (macros) heavily.
+
+The intention is to support PHP 8.4+ without any deprecation warnings so that `E_ALL` can be used as the reporting level without issues.
+
+---
+
+The original readme content follows.
+
+---
+
+---
+
+
 [Latte: A Next-Generation Templating System for PHP](https://latte.nette.org)
 =============================================================================
 

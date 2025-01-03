@@ -1,8 +1,7 @@
 {
-	"name": "latte/latte",
-	"description": "☕ Latte: the intuitive and fast template engine for those who want the most secure PHP sites. Introduces context-sensitive escaping.",
+	"name": "viaaurea/latte-v2",
+	"description": "☕ Latte v2.x port for recent PHP versions.",
 	"keywords": ["template", "nette", "security", "engine", "html", "twig", "context-sensitive", "escaping"],
-	"homepage": "https://latte.nette.org",
 	"license": ["BSD-3-Clause", "GPL-2.0-only", "GPL-3.0-only"],
 	"authors": [
 		{
@@ -15,7 +14,7 @@
 		}
 	],
 	"require": {
-		"php": "7.1 - 8.3",
+		"php": "7.1 - 8.4",
 		"ext-json": "*",
 		"ext-tokenizer": "*"
 	},
@@ -44,10 +43,5 @@
 	"scripts": {
 		"phpstan": "phpstan analyse",
 		"tester": "tester tests -s"
-	},
-	"extra": {
-		"branch-alias": {
-			"dev-master": "2.11-dev"
-		}
 	}
 }
