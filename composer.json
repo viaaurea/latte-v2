@@ -32,9 +32,6 @@
 		"nette/utils": "to use filter |webalize",
 		"nette/php-generator": "to use tag {templatePrint}"
 	},
-	"replace": {
-		"latte/latte": "2.11.*"
-	},
 	"conflict": {
 		"nette/application": "<2.4.1"
 	},
