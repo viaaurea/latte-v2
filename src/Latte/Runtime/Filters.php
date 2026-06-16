@@ -244,6 +244,15 @@ class Filters
 		} elseif ($conv = self::getConvertor($source, $dest)) {
 			$info->contentType = $dest;
 			return $conv($s);
+		} elseif (
+			in_array($source, [Engine::CONTENT_HTML, Engine::CONTENT_XHTML], true)
+			&& in_array($dest, [Engine::CONTENT_XML, Engine::CONTENT_XHTML], true)
+		) {
+			// HTML/XHTML-escapovaný obsah je validní i v XML kontextu (entity & < > jsou
+			// platné v XML), takže místo chyby provedeme passthrough. Typický případ:
+			// {control foo:xml} renderující XML fragment uvnitř {contentType xml} šablony.
+			$info->contentType = $dest;
+			return $s;
 		} else {
 			throw new RuntimeException('Filters: unable to convert content type ' . strtoupper($source) . ' to ' . strtoupper($dest));
 		}
