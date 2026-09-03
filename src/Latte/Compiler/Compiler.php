@@ -184,7 +184,7 @@ class Compiler
 		$macroHandlers = new \SplObjectStorage;
 
 		if ($this->macros) {
-			array_map([$macroHandlers, 'attach'], array_merge(...array_values($this->macros)));
+			array_map([$macroHandlers, 'offsetSet'], array_merge(...array_values($this->macros)));
 		}
 
 		foreach ($macroHandlers as $handler) {
