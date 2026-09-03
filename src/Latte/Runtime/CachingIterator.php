@@ -44,7 +44,7 @@ class CachingIterator extends \CachingIterator implements \Countable
 	public function __construct($iterator, ?self $parent = null)
 	{
 		if (is_array($iterator) || $iterator instanceof \stdClass) {
-			$iterator = new \ArrayIterator($iterator);
+			$iterator = new \ArrayIterator((array) $iterator);
 
 		} elseif ($iterator instanceof \IteratorAggregate) {
 			do {

@@ -298,7 +298,7 @@ class Template
 			: ($this->blocks[self::LAYER_LOCAL][$name] ?? $this->blocks[self::LAYER_TOP][$name] ?? null);
 
 		if (!$block) {
-			$hint = ($t = Latte\Helpers::getSuggestion($this->getBlockNames($layer), $name))
+			$hint = ($t = Latte\Helpers::getSuggestion($this->getBlockNames($layer ?? self::LAYER_TOP), $name))
 				? ", did you mean '$t'?"
 				: '.';
 			$name = $layer ? "$layer $name" : $name;

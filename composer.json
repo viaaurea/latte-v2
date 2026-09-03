@@ -30,11 +30,7 @@
 		"ext-mbstring": "to use filters like lower, upper, capitalize, ...",
 		"ext-fileinfo": "to use filter |datastream",
 		"nette/utils": "to use filter |webalize",
-		"nette/php-generator": "to use tag {templatePrint}",
-		"nette/caching": "to use tag {cache}"
-	},
-	"replace": {
-		"latte/latte": "3.1.6"
+		"nette/php-generator": "to use tag {templatePrint}"
 	},
 	"conflict": {
 		"nette/application": "<2.4.1"
