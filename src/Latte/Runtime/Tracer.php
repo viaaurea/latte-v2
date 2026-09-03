@@ -29,7 +29,10 @@ class Tracer
 		];
 		foreach ($props as $name => $value) {
 			$ref = new \ReflectionProperty('Exception', $name);
-			$ref->setAccessible(true);
+			if (PHP_VERSION_ID < 80100) {
+				$ref->setAccessible(true);
+			}
+
 			$ref->setValue($e, $value);
 		}
 
