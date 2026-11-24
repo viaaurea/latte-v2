@@ -115,7 +115,9 @@ class Blueprint
 		}
 
 		if ($namespace) {
-			$type = @$namespace->unresolveName($type); // simplifyName() in v4
+			$type = method_exists($namespace, 'simplifyName')
+				? $namespace->simplifyName($type) // nette/php-generator 3.6+
+				: $namespace->unresolveName($type);
 		}
 
 		if ($nullable && strcasecmp($type, 'mixed')) {

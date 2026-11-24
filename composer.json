@@ -14,16 +14,16 @@
 		}
 	],
 	"require": {
-		"php": "8.0 - 8.5",
+		"php": "8.0 - 8.6",
 		"ext-json": "*",
 		"ext-tokenizer": "*"
 	},
 	"require-dev": {
 		"nette/tester": "^2.0",
 		"tracy/tracy": "^2.3",
-		"nette/utils": "^3.0",
+		"nette/utils": "^3.0 || ^4.0",
 		"phpstan/phpstan": "^1",
-		"nette/php-generator": "^3.3.4"
+		"nette/php-generator": "^3.3.4 || ^4.0"
 	},
 	"suggest": {
 		"ext-iconv": "to use filters |reverse, |substring",
